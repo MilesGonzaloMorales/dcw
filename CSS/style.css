@@ -1,0 +1,424 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    /* background-color: greenyellow; */
+    scroll-behavior: smooth;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* CSS VARIABLES */
+:root {
+    --navbar-height: 10vh;
+}
+
+/***********************************NAVIGATION BAR*****************************************************/
+#navbar {
+    display: flex;
+    /* CONFUSED ABOUT NAVBAR BACKGROUND COLOR */
+    background-color: rgba(198, 167, 198, 0.65);
+    justify-content: center;
+    align-items: center;
+    /* ***************POSITION STICKY*************/
+    /* METHOD*/
+    /* position: sticky;
+    top: 0px;
+    z-index: 100; */
+
+    /* METHOD 2 */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+
+}
+
+.logo {
+    margin: 10px 10px;
+    /* border: 2px solid red; */
+    padding: 10px 10px;
+}
+
+/* NAVIAGTION BAR: LIST STYLING */
+#navbar ul {
+    display: flex;
+}
+
+#navbar ul li {
+    list-style: none;
+    /* border: 2px solid purple; */
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    /* border: 2px solid orange; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    padding: 20px 20px;
+    font-size: 1.5rem;
+    /* border-radius: 20px; */
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+/***************************************Top and Bottom borders come in ******************************************/
+a:before,
+a:after {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 3px;
+    background: #FFF;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+a:before {
+    top: 0px;
+    transform: translateY(-10px);
+}
+
+a:after {
+    bottom: 0px;
+    transform: translateY(10px);
+}
+
+a:hover:before,
+a:hover:after {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/*****************************HOME PAGE SECTION*************************************************/
+#home {
+    /* CONFUSED ABOUT PAGE BACKGROUND COLOR */
+    background-color: rgba(158, 43, 158, 0.65);
+    height: 120vh;
+    /* height: 400px; */
+    overflow: hidden;
+    /* cuts the image from the container which is leaked */
+    /* overflow: scroll; */
+    position: relative;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.slider {
+    display: block;
+    position: relative;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 34px;
+    color: white;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    max-width: 600px;
+}
+
+.content h1,
+p {
+    /* border: 2px solid greenyellow; */
+    padding: 34px;
+    color: white;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 80%;
+    max-width: 600px;
+}
+
+.slider img {
+    display: block;
+    margin: auto;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+/********************************************ABOUT US***************************************** */
+#about {
+    background-color: rgba(131, 74, 131, 0.95);
+    color: white;
+    display: flex;
+    height: 800px;
+}
+
+#about .matter {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* border: 2px solid green; */
+    /* background-color: rgba(199, 62, 199, 0.73); */
+    color: white;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#about .matter h2 {
+    /* border: 2px solid red; */
+    margin: 20px 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+#about .matter p {
+    /* border: 2px solid blue; */
+    margin: 20px 0;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/******************************TREATMENT-SECTION**************************************************  */
+#treatment {
+    background-color: rgba(131, 74, 131, 0.95);
+    /* border-color: rgb(186, 14, 14); */
+    border: 1px solid purple;
+    background-image: url("/img/treat7.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* background-size: cover; */
+}
+
+#treatment .box {
+    width: 80vw;
+    background-color: rgba(102, 98, 98, 0.2);
+    /* border: 2px solid blue; */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 200px;
+    margin: 50px 80px;
+}
+
+#treatment .box h3 {
+    /* border: 2px solid green; */
+    font-size: 35px;
+    line-height: 1.5;
+    font-weight: 1000;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+#treatment .box p {
+    /* border: 2px solid black; */
+    font-size: 20px;
+    line-height: 1.1;
+    font-weight: 700;
+    text-align: center;
+}
+
+#treatment-slider {
+    /* border: 5px solid green; */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: #efefef; */
+    background: rgb(227, 222, 222);
+}
+
+.container {
+    max-width: 1400px;
+    width: 100%;
+    padding: 60px 0;
+}
+
+.slide-container {
+    margin: 0 30px;
+    overflow: hidden;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+}
+
+.card .image-box {
+    height: 300px;
+}
+
+.card .image-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.card .profile-details {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    padding: 15px;
+}
+
+.card .profile-details img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.profile-details .name {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.profile-details .job {
+    font-size: 12px;
+    font-weight: 500;
+    color: #4d4d4d;
+}
+
+.swiper-navBtn {
+    color: #000;
+    height: 50px;
+    width: 50px;
+    transform: translateY(-40%);
+    background: #fff;
+    border-radius: 50%;
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+    font-size: 24px;
+}
+
+.swiper-pagination-bullet {
+    background-color: #333;
+}
+
+@media screen and (max-width: 768px) {
+    .swiper-navBtn {
+        display: none;
+    }
+}
+
+/********************************************TESTIMONIAL SECTION************************************************************/
+
+#testimonials {
+    width: 99vw;
+    /* Adjust this value to control the width of the slider */
+    background-color: rgba(131, 74, 131, 0.95);
+    /* Set your background color */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+#testimonials .slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#testimonials .slider {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+#testimonials .testimonial {
+    flex: 0 0 100%;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #fff;
+}
+
+#testimonials .testimonial p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#testimonials .testimonial strong {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* *****************************************************CONTACT SECTION***************************************************************************** */
+.primary {
+    font-size: 2.5rem;
+    padding: 12px;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif */
+    font-family: 'Lilita One', cursive;
+}
+
+#contact {
+    position: relative;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.8;
+    background-image: url("../img/contact1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#contact h1 {
+    display: block;
+    /* border: 2px solid purple; */
+    margin: auto;
+    width: 20vw;
+}
+
+
+#Contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+    /* border: 2px solid red; */
+}
+
+#Contact-box form {
+    width: 45%;
+    /* border: 2px solid blue; */
+}
+
+#Contact-box label {
+    font-size: 1.3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* border: 2px solid yellow; */
+}
+
+#Contact-box input,
+#Contact-box textarea {
+    width: 100%;
+    padding: 0.5rem;
+    /* border: 2px solid green; */
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+
+/* *******************************************FOOTER SECTION*********************************************************************** */
+.rights {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 7px 0px;
+}
