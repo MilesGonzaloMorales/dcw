@@ -8,10 +8,16 @@
     font-family: "Poppins", sans-serif;
 }
 
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
 html {
-    /* background-color: greenyellow; */
+    /* background-color: rgba(198, 167, 198, 0.65); */
     scroll-behavior: smooth;
-    max-width: 100vw;
+    /* max-width: 100vw; */
     overflow-x: hidden;
 }
 
@@ -20,13 +26,18 @@ html {
     --navbar-height: 10vh;
 }
 
+header {
+    width: 100%;
+    background-color: rgba(198, 167, 198, 0.65);
+}
+
 /***********************************NAVIGATION BAR*****************************************************/
 #navbar {
     display: flex;
-    /* CONFUSED ABOUT NAVBAR BACKGROUND COLOR */
     background-color: rgba(198, 167, 198, 0.65);
     justify-content: center;
     align-items: center;
+    margin: 30px;
     /* ***************POSITION STICKY*************/
     /* METHOD*/
     /* position: sticky;
@@ -36,8 +47,9 @@ html {
     /* METHOD 2 */
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 95%;
     z-index: 100;
+    border-radius: 20px;
 
 }
 
@@ -45,6 +57,7 @@ html {
     margin: 10px 10px;
     /* border: 2px solid red; */
     padding: 10px 10px;
+    border-radius: 20%;
 }
 
 /* NAVIAGTION BAR: LIST STYLING */
@@ -101,10 +114,8 @@ a:hover:after {
 
 /*****************************HOME PAGE SECTION*************************************************/
 #home {
-    /* CONFUSED ABOUT PAGE BACKGROUND COLOR */
     background-color: rgba(158, 43, 158, 0.65);
-    height: 120vh;
-    /* height: 400px; */
+    height: 100vh;
     overflow: hidden;
     /* cuts the image from the container which is leaked */
     /* overflow: scroll; */
@@ -126,28 +137,38 @@ a:hover:after {
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
+    /* display: grid;
+    place-items: center; */
     z-index: 2;
-    width: 80%;
-    max-width: 600px;
+    width: 50%;
+    height: 60%;
 }
 
-.content h1,
-p {
+.content h1 {
     /* border: 2px solid greenyellow; */
-    padding: 34px;
+    padding: 20px;
     color: white;
     text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    width: 80%;
-    max-width: 600px;
+    /* width: 80%;
+     */
+    word-wrap: break-word;
+    /* max-width: 600px; */
+}
+
+.content p {
+    margin: 0;
+    padding: 0;
+    font-weight: 100;
 }
 
 .slider img {
     display: block;
-    margin: auto;
+    /* margin: auto; */
+    height: 100vh;
+    width: 100vw;
     opacity: 0.7;
     z-index: 1;
 }
@@ -157,7 +178,20 @@ p {
     background-color: rgba(131, 74, 131, 0.95);
     color: white;
     display: flex;
-    height: 800px;
+    /* height: 800px; */
+    height: 100vh;
+    width: 100%;
+}
+
+#about .image {
+    height: 100%;
+    width: 50%;
+    /* border: 2px solid green; */
+}
+
+#about .image img {
+    height: 100%;
+    width: 100%;
 }
 
 #about .matter {
@@ -171,35 +205,37 @@ p {
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
+    height: 100%;
+    width: 50%;
 }
 
 #about .matter h2 {
     /* border: 2px solid red; */
     margin: 20px 0;
-    font-size: 2rem;
+    font-size: 3rem;
     text-transform: uppercase;
 }
 
 #about .matter p {
     /* border: 2px solid blue; */
-    margin: 20px 0;
-    font-size: 1rem;
-    line-height: 1.4;
+    margin: 10px 0;
+    font-size: 1.8rem;
+    line-height: 1.3;
 }
 
 /******************************TREATMENT-SECTION**************************************************  */
 #treatment {
-    background-color: rgba(131, 74, 131, 0.95);
+    /* background-color: rgba(131, 74, 131, 0.95); */
     /* border-color: rgb(186, 14, 14); */
-    border: 1px solid purple;
-    background-image: url("/img/treat7.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    /* background-size: cover; */
+    /* border: 2px solid black; */
+    height: 160vh;
+    width: 100%;
 }
 
 #treatment .box {
-    width: 80vw;
+    width: 100%;
+    /* height: 90vh; */
+    height: 60%;
     background-color: rgba(102, 98, 98, 0.2);
     /* border: 2px solid blue; */
     color: white;
@@ -207,15 +243,14 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 25px 200px;
-    margin: 50px 80px;
+    background-image: url("/img/treat7.jpg");
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    background-size: cover;
 }
 
 #treatment .box h3 {
     /* border: 2px solid green; */
-    font-size: 35px;
-    line-height: 1.5;
-    font-weight: 1000;
     text-align: center;
     margin: 0;
     padding: 10px;
@@ -223,46 +258,81 @@ p {
 
 #treatment .box p {
     /* border: 2px solid black; */
-    font-size: 20px;
     line-height: 1.1;
     font-weight: 700;
     text-align: center;
 }
 
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 #treatment-slider {
     /* border: 5px solid green; */
-    min-height: 100vh;
+    height: 40%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background: #efefef; */
-    background: rgb(227, 222, 222);
+    background: rgb(148, 124, 150);
+    margin: 0;
+    /* Add this to reset margins */
+    padding: 0;
+    /* Add this to reset padding */
+    position: relative;
+    /* Make the container a positioned parent for absolute positioning */
 }
 
 .container {
-    max-width: 1400px;
     width: 100%;
-    padding: 60px 0;
+    height: 100%;
+    /* border: 2px solid red; */
+    /* background-color: yellow; */
+    /* padding: 60px 0; */
+    margin: 0;
+    /* Add this to reset margins */
+    padding: 0;
+    /* Add this to reset padding */
+    box-sizing: border-box;
 }
 
 .slide-container {
-    margin: 0 30px;
+    /* border: 2px solid blue; */
     overflow: hidden;
+    padding: 0;
+    /* background-color: orange; */
+    height: 80%;
+    width: 90%;
+    /* margin: auto; */
+    /* Set the fixed width */
+    margin-left: auto;
+    /* Auto margin on the left */
+    margin-right: auto;
+    /* Auto margin on the right */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* margin-bottom: auto; */
+
 }
 
 .card {
-    background: #fff;
+    /* border: 2px solid greenyellow; */
+    background: #5800e6;
     border-radius: 8px;
+    height: 100%;
+    width: 100%;
 }
 
 .card .image-box {
-    height: 300px;
+    height: 80%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .card .image-box img {
     width: 100%;
     height: 100%;
     border-radius: 8px 8px 0 0;
+    margin: 0;
+    padding: 0;
 }
 
 .card .profile-details {
@@ -270,32 +340,54 @@ p {
     align-items: center;
     column-gap: 12px;
     padding: 15px;
+    margin: 0;
+    padding: 0;
+    height: 20%;
+    width: 100%;
 }
 
-.card .profile-details img {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-}
 
 .profile-details .name {
     font-size: 15px;
     font-weight: 500;
+    margin: 0;
+    padding: 0;
 }
 
-.profile-details .job {
-    font-size: 12px;
-    font-weight: 500;
-    color: #4d4d4d;
-}
 
 .swiper-navBtn {
-    color: #000;
-    height: 50px;
-    width: 50px;
-    transform: translateY(-40%);
-    background: #fff;
+    color: green;
+    height: 40px;
+    width: 40px;
+    transform: translateY(-50%);
+    background: orange;
     border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.swiper-button-next-treatment {
+    right: 10px;
+    /* Adjust the right margin as needed */
+    background-color: red;
+    background-image: url("/img/rightArrow.jpg");
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    background-size: cover;
+}
+
+.swiper-button-prev-treatment {
+    left: 10px;
+    /* Adjust the left margin as needed */
+    background-color: red;
+    background-image: url("/img/leftArrow.jpg");
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    background-size: cover;
 }
 
 .swiper-navBtn::before,
@@ -304,7 +396,7 @@ p {
 }
 
 .swiper-pagination-bullet {
-    background-color: #333;
+    background-color: #15d70f;
 }
 
 @media screen and (max-width: 768px) {
@@ -313,58 +405,229 @@ p {
     }
 }
 
-/********************************************TESTIMONIAL SECTION************************************************************/
 
 #testimonials {
-    width: 99vw;
     /* Adjust this value to control the width of the slider */
     background-color: rgba(131, 74, 131, 0.95);
     /* Set your background color */
-    color: white;
+    color: rgb(82, 78, 82);
     text-align: center;
-    padding: 20px 0;
     overflow: hidden;
+    height: 120vh;
+    width: 100%;
+    /* border: 2px solid black; */
+    background-image: url("/img/test2.jpg");
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    background-size: cover;
 }
 
-#testimonials .slider-container {
+#testimonials .component {
     width: 100%;
-    overflow: hidden;
+    /* height: 90vh; */
+    height: 30%;
+    /* border: 2px solid blue; */
+}
+
+.component h4 {
+    margin: 0;
+    padding: 4rem;
+    font-size: 3.5rem;
+    /* border: 2px solid greenyellow; */
+}
+
+.component p {
+    margin: 0;
+    /* border: 2px solid black; */
+    padding: 1.5rem;
+    font-size: 1.7rem;
+}
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+#testimonial-slider {
+    height: 70%;
+    width: 100%;
+    /* border: 5px solid green; */
+    margin: 0;
+    padding: 0;
     position: relative;
 }
 
-#testimonials .slider {
+.slide-container {
+    height: 80%;
+    width: 90%;
+    /* Set the fixed width */
+    margin-left: auto;
+    /* Auto margin on the left */
+    margin-right: auto;
+    /* Auto margin on the right */
+    /* margin-top: auto; */
+    /* margin-bottom: auto; */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* border: 2px solid red; */
+
+}
+
+.slide-content {
+    overflow: hidden;
+    border-radius: 25px;
+    /* border: 2px solid blue; */
+    height: 90%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.card {
+    border-radius: 25px;
+    background-color: #FFF;
+    /* border: 2px solid green; */
+}
+
+.image-content,
+.card-content {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+
+.image-content {
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
     width: 100%;
-    transition: transform 0.5s ease-in-out;
+    background-color: #4070F4;
+    border-radius: 25px 25px 0 25px;
 }
 
-#testimonials .testimonial {
-    flex: 0 0 100%;
+.overlay::before,
+.overlay::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #4070F4;
+}
+
+.overlay::after {
+    border-radius: 0 25px 0 0;
+    background-color: #FFF;
+}
+
+.card-image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #FFF;
+    padding: 3px;
+}
+
+.card-image .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #4070F4;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+.description {
+    font-size: 14px;
+    color: #707070;
     text-align: center;
-    padding: 20px;
-    border: 1px solid #fff;
 }
 
-#testimonials .testimonial p {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+.button {
+    border: none;
+    font-size: 16px;
+    color: #FFF;
+    padding: 8px 16px;
+    background-color: green;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-#testimonials .testimonial strong {
-    font-weight: bold;
-    font-size: 1.2rem;
+.button:hover {
+    background: #265DF2;
+}
+
+.swiper-navBtn {
+    color: #6E93f7;
+    transition: color 0.3s ease;
+}
+
+.swiper-navBtn:hover {
+    color: #4070F4;
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+    font-size: 35px;
+}
+
+.swiper-button-next-testimonial {
+    right: 0;
+    background-image: url("/img/rightArrow.jpg");
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    background-size: cover;
+}
+
+.swiper-button-prev-testimonial {
+    left: 0;
+    background-color: red;
+    background-image: url("/img/leftArrow.jpg");
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    background-size: cover;
+}
+
+.swiper-pagination-bullet {
+    background-color: #6E93f7;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #4070F4;
+}
+
+@media screen and (max-width: 768px) {
+    .slide-content {
+        margin: 0 10px;
+    }
+
+    .swiper-navBtn {
+        display: none;
+    }
 }
 
 /* *****************************************************CONTACT SECTION***************************************************************************** */
-.primary {
-    font-size: 2.5rem;
-    padding: 12px;
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif */
-    font-family: 'Lilita One', cursive;
-}
-
 #contact {
     position: relative;
+    height: 200vh;
+    width: 100%;
 }
 
 #contact::before {
@@ -377,13 +640,16 @@ p {
     background-image: url("../img/contact1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    /* opacity: 0.7; */
 }
 
-#contact h1 {
+#contact h5 {
     display: block;
     /* border: 2px solid purple; */
-    margin: auto;
+    color: black;
     width: 20vw;
+    height: 20vh;
+    margin: auto;
 }
 
 
@@ -391,13 +657,15 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 34px;
+    /* padding-bottom: 34px; */
     /* border: 2px solid red; */
+    height: 45%;
 }
 
 #Contact-box form {
-    width: 45%;
+    width: 55%;
     /* border: 2px solid blue; */
+    /* backdrop-filter: blur(7px); */
 }
 
 #Contact-box label {
@@ -415,10 +683,100 @@ p {
     font-size: 1.1rem;
 }
 
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+#contact-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 45%;
+}
+
+.contact-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /* Text color */
+    /* border: 2px solid greenyellow; */
+    border-radius: 5px;
+    width: 15vw;
+    height: 10vh;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    flex-grow: 1;
+    /* Distribute space equally among buttons */
+}
+
+/* Individual button background colors */
+.whatsapp {
+    background-color: green;
+    /* Color for the WhatsApp button */
+}
+
+.email {
+    background-color: crimson;
+    /* Color for the Email button */
+}
+
+.call {
+    background-color: purple;
+    /* Color for the Call button */
+}
+
+.instagram {
+    background-color: grey;
+}
+
+.telegram {
+    background-color: royalblue;
+}
+
+.linkedin {
+    background-color: magenta;
+}
+
+.facebook {
+    background-color: maroon;
+}
+
+.contact-button svg {
+    margin-right: 10px;
+    /* Add some spacing between the icon and text */
+    width: 40px;
+    /* Set the width of the SVG icon as needed */
+    height: 40px;
+    /* Set the height of the SVG icon as needed */
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+    /* Change to a darker shade for hover effect */
+}
+
+
 /* *******************************************FOOTER SECTION*********************************************************************** */
 .rights {
     text-align: center;
     background-color: black;
     color: white;
     padding: 7px 0px;
+}
+
+/* ****************************************UTILITY CLASSES************************************************* */
+/* .primary IS FOR ALL THE HEADING TAGS */
+.primary {
+    /* font-size: 2.5rem; */
+    font-size: 3.5rem;
+    padding: 12px;
+    font-family: 'Kanit', sans-serif;
+}
+
+/* .secondary IS FOR ALL THE PARAGRAPH TAGS */
+.secondary {
+    /* font-size: 1.5rem; */
+    font-size: 1.8rem;
+    font-family: 'Ubuntu Condensed', sans-serif;
 }

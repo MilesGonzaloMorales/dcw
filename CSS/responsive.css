@@ -1,0 +1,99 @@
+/* Existing CSS code */
+
+/* Add a media query for screens with a max-width of 600px */
+@media screen and (max-width: 600px) {
+
+    /* Reset some global styles for smaller screens */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+    }
+
+    :root {
+        --navbar-height: 10vh;
+    }
+
+    /* Adjust header and navigation bar styles for smaller screens */
+    header {
+        width: 100%;
+        background-color: rgba(198, 167, 198, 0.65);
+    }
+
+    #navbar {
+        margin: 0;
+    }
+
+    /* Adjust home page styles for smaller screens */
+    #home {
+        background-color: yellowgreen;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .slider {
+        /* Update slider styles here */
+    }
+
+    .content {
+        padding: 5px;
+    }
+
+    .content h1 {
+        /* border: 2px solid green; */
+    }
+
+    .content p {
+        /* border: 2px solid red; */
+    }
+
+    /* About Us Section */
+    #about {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #about .image {
+        display: none;
+    }
+
+    #about .matter {
+        width: 100%;
+        padding: 5px;
+        background-image: url("/img/aboutResp.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #about .matter h2 {
+        margin: 10px 0;
+        font-size: 1.7rem;
+    }
+
+    /* Treatment Section */
+    /* Testimonials Section */
+    /* Contact Section */
+    /* Footer */
+
+    /* Update utility classes for smaller screens */
+    .primary {
+        font-size: 1.5rem;
+        padding: 5px;
+    }
+
+    .secondary {
+        font-size: 1rem;
+    }
+}
