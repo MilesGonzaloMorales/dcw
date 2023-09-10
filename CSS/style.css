@@ -683,6 +683,20 @@ a:hover:after {
     font-size: 1.1rem;
 }
 
+#Contact-box form button {
+    /* border: 2px solid green; */
+    padding: 10px;
+    background: rgb(232, 13, 1);
+    color: white;
+    font-size: 20px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 18vw;
+    margin: 20px 280px;
+    border-radius: 30px;
+    /* padding: auto; */
+}
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 #contact-info {
     display: flex;
