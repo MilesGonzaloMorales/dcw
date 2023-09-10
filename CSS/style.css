@@ -647,11 +647,12 @@ a:hover:after {
     display: block;
     /* border: 2px solid purple; */
     color: black;
-    width: 20vw;
-    height: 20vh;
-    margin: auto;
+    width: auto;
+    height: auto;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
 }
-
 
 #Contact-box {
     display: flex;
