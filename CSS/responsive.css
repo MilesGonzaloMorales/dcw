@@ -37,8 +37,8 @@
 
     /* Adjust home page styles for smaller screens */
     #home {
-        background-color: yellowgreen;
-        height: 100vh;
+        /* background-color: yellowgreen; */
+        width: 100%;
         overflow: hidden;
         position: relative;
     }
@@ -82,9 +82,47 @@
         font-size: 1.7rem;
     }
 
+    #about .matter p {
+        /* border: 2px solid red; */
+        margin: 10px 0;
+        padding: 20px;
+        font-size: 1.2rem;
+        line-height: 1.3;
+    }
+
     /* Treatment Section */
     /* Testimonials Section */
+    #testimonials .component h4 {
+        margin: 5px;
+        padding: 5px;
+        font-size: 3rem;
+    }
+
+    #testimonials .component p {
+        margin: 5px;
+        padding: 5px;
+        font-size: 1.2rem;
+    }
+
     /* Contact Section */
+    #Contact-box form h5 {
+        font-size: 2rem;
+        width: auto;
+        height: auto;
+        margin: 15px;
+        padding: 15px;
+    }
+
+    #Contact-box form button {
+        width: 45vw;
+        margin: 20px 20px;
+        border-radius: 25px;
+    }
+
+    .contact-button {
+        width: 50vw;
+    }
+
     /* Footer */
 
     /* Update utility classes for smaller screens */
