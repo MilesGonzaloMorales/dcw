@@ -1,3 +1,15 @@
+//*********************JAVASCRIPT FOR NAVIGATION BAR START****************************************************
+burger = document.querySelector(".burger");
+navbar = document.querySelector(".navbar");
+navList = document.querySelector(".nav-list");
+logo = document.querySelector(".logo");
+
+burger.addEventListener("click", () => {
+    navbar.classList.toggle("h-nav-resp");
+    navList.classList.toggle("v-class-resp");
+    logo.classList.toggle("v-class-resp");
+})
+
 //*********************JAVASCRIPT FOR SLIDER HOME PAGE START****************************************************
 var slideIndex = 0;
 carousel();
@@ -84,4 +96,4 @@ var swiper = new Swiper(".slide-content", {
         },
     },
 });
-    // ***********************************JAVASCRIPT FOR THE TESTIMONIAL SLIDER END **************************************************
+// ***********************************JAVASCRIPT FOR THE TESTIMONIAL SLIDER END **************************************************

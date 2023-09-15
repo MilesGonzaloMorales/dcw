@@ -32,7 +32,7 @@ header {
 }
 
 /***********************************NAVIGATION BAR*****************************************************/
-#navbar {
+.navbar {
     display: flex;
     background-color: rgba(198, 167, 198, 0.65);
     justify-content: center;
@@ -61,16 +61,17 @@ header {
 }
 
 /* NAVIAGTION BAR: LIST STYLING */
-#navbar ul {
+
+.navbar ul {
     display: flex;
 }
 
-#navbar ul li {
+.navbar ul li {
     list-style: none;
     /* border: 2px solid purple; */
 }
 
-#navbar ul li a {
+.navbar ul li a {
     text-decoration: none;
     /* border: 2px solid orange; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -82,6 +83,23 @@ header {
     z-index: 0;
     cursor: pointer;
 }
+
+.burger {
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    right: 10%;
+    top: 15px;
+}
+
+.line {
+    width: 33px;
+    background-color: white;
+    height: 5px;
+    margin: 5px 3px;
+}
+
+
 
 /***************************************Top and Bottom borders come in ******************************************/
 a:before,
@@ -278,6 +296,7 @@ a:hover:after {
     /* Add this to reset padding */
     position: relative;
     /* Make the container a positioned parent for absolute positioning */
+
 }
 
 .container {
@@ -637,9 +656,11 @@ a:hover:after {
     height: 100%;
     z-index: -1;
     opacity: 0.8;
+    background: rgba(0, 0, 0, 0.4);
     background-image: url("../img/contact1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-blend-mode: darken;
     /* opacity: 0.7; */
 }
 
@@ -654,6 +675,7 @@ a:hover:after {
     text-align: center;
 }
 
+
 #Contact-box {
     display: flex;
     justify-content: center;
@@ -665,6 +687,8 @@ a:hover:after {
 
 #Contact-box form {
     width: 55%;
+    margin: 0;
+    height: 100%;
     /* border: 2px solid blue; */
     /* backdrop-filter: blur(7px); */
 }
@@ -698,6 +722,7 @@ a:hover:after {
     border-radius: 30px;
     /* padding: auto; */
 }
+
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 #contact-info {
     display: flex;
@@ -728,33 +753,40 @@ a:hover:after {
 /* Individual button background colors */
 .whatsapp {
     background-color: green;
+    border: 0;
     /* Color for the WhatsApp button */
 }
 
 .email {
     background-color: crimson;
     /* Color for the Email button */
+    border: 0;
 }
 
 .call {
     background-color: purple;
     /* Color for the Call button */
+    border: 0;
 }
 
 .instagram {
     background-color: grey;
+    border: 0;
 }
 
 .telegram {
     background-color: royalblue;
+    border: 0;
 }
 
 .linkedin {
     background-color: magenta;
+    border: 0;
 }
 
 .facebook {
     background-color: maroon;
+    border: 0;
 }
 
 .contact-button svg {
@@ -775,7 +807,7 @@ a:hover:after {
 /* *******************************************FOOTER SECTION*********************************************************************** */
 .rights {
     text-align: center;
-    background-color: green;
+    background-color: black;
     color: white;
     padding: 7px 0px;
 }
